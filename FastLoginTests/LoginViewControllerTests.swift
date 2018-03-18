@@ -71,4 +71,19 @@ class LoginViewControllerTests: XCTestCase {
     XCTAssertNotNil(alertController)
     XCTAssert(alertController?.message?.lowercased().contains("wrong password") == true)
   }
+
+  func testJoinButton_pushCreateAccountViewController() {
+    // given
+    _ = self.viewController.view // loadView
+
+    // when
+    self.viewController.joinButton.sendActions(for: .touchUpInside)
+
+    // then
+    let expectation = XCTestExpectation()
+    XCTWaiter().wait(for: [expectation], timeout: 1)
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: expectation.fulfill)
+    XCTAssertEqual(self.viewController.navigationController?.viewControllers.count, 2)
+    XCTAssertEqual(self.viewController.navigationController?.topViewController?.title, "Create Account")
+  }
 }
