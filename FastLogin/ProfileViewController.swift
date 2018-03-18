@@ -11,6 +11,23 @@ import UIKit
 final class ProfileViewController: UIViewController {
   @IBOutlet var welcomeLabel: UILabel!
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    UserService.shared.currentUser { result in
+      switch result {
+      case let .success(username):
+        self.welcomeLabel.text = "Welcome, \(username)!"
+
+      case .failure:
+        self.welcomeLabel.text = "Error!"
+      }
+    }
+  }
+
   @IBAction private func logout() {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let window = UIApplication.shared.windows.first
+    window?.rootViewController = storyboard.instantiateInitialViewController()
   }
 }
