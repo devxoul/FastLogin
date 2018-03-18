@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c6P-8S-W51">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="Kkq-fs-wzY">
+            <objects>
+                <viewController id="yXy-xU-s2v" customClass="ProfileViewController" customModule="FastLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k3y-99-58B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Name!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbL-04-o2o">
+                                <rect key="frame" x="116" y="314" width="144" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zU6-wR-dnG">
+                                <rect key="frame" x="159" y="393" width="57" height="30"/>
+                                <state key="normal" title="Sign out"/>
+                                <connections>
+                                    <action selector="logout" destination="yXy-xU-s2v" eventType="touchUpInside" id="3nv-dg-mVk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sbL-04-o2o" firstAttribute="centerY" secondItem="k3y-99-58B" secondAttribute="centerY" id="3De-O9-2Yb"/>
+                            <constraint firstItem="sbL-04-o2o" firstAttribute="centerX" secondItem="k3y-99-58B" secondAttribute="centerX" id="Ghm-6l-Rlb"/>
+                            <constraint firstItem="zU6-wR-dnG" firstAttribute="top" secondItem="sbL-04-o2o" secondAttribute="bottom" constant="40" id="leN-xw-0Fp"/>
+                            <constraint firstItem="zU6-wR-dnG" firstAttribute="centerX" secondItem="k3y-99-58B" secondAttribute="centerX" id="zhP-kC-b3W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qlf-mg-XUU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="g4c-9i-Jua"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="sbL-04-o2o" id="HSq-iE-qEk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nvv-DO-kNh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="247.82608695652175"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lld-50-3mm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c6P-8S-W51" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fUA-gN-8Ad">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yXy-xU-s2v" kind="relationship" relationship="rootViewController" id="Q3j-NA-zY6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CBA-D1-ZF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-426" y="248"/>
+        </scene>
+    </scenes>
+</document>
