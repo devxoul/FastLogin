@@ -73,17 +73,15 @@ class LoginViewControllerTests: XCTestCase {
   }
 
   func testJoinButton_pushCreateAccountViewController() {
-    // given
     _ = self.viewController.view // loadView
 
-    // when
-    self.viewController.joinButton.sendActions(for: .touchUpInside)
+    let segueTemplates = self.viewController.value(forKey: "_storyboardSegueTemplates") as? [AnyObject]
+    let segueTemplate = segueTemplates?.first as AnyObject
 
-    // then
-    let expectation = XCTestExpectation()
-    XCTWaiter().wait(for: [expectation], timeout: 1)
-    DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: expectation.fulfill)
-    XCTAssertEqual(self.viewController.navigationController?.viewControllers.count, 2)
-    XCTAssertEqual(self.viewController.navigationController?.topViewController?.title, "Create Account")
+    let buttonTargetActions = self.viewController.joinButton.value(forKey: "_targetActions") as? [AnyObject]
+    let buttonTarget = buttonTargetActions?.first?.value(forKey: "_target") as AnyObject
+
+    XCTAssertEqual(NSStringFromClass(type(of: segueTemplate)), "UIStoryboardShowSegueTemplate")
+    XCTAssertTrue(segueTemplate === buttonTarget)
   }
 }
