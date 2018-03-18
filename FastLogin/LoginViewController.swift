@@ -14,6 +14,8 @@ class LoginViewController: UIViewController {
   @IBOutlet var loginButton: UIButton!
   @IBOutlet var joinButton: UIButton!
 
+  var authService: AuthServiceType?
+
   override func viewDidLoad() {
     super.viewDidLoad()
   }
@@ -22,7 +24,7 @@ class LoginViewController: UIViewController {
     let username = self.usernameField.text
     let password = self.passwordField.text
 
-    AuthService.shared.login(username: username, password: password) { result in
+    self.authService?.login(username: username, password: password) { result in
       switch result {
       case .success:
         let storyboard = UIStoryboard(name: "Profile", bundle: nil)
