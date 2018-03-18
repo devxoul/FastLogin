@@ -11,7 +11,7 @@
 		03626579205E762700BBDAC0 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03626577205E762700BBDAC0 /* Profile.storyboard */; };
 		0362657B205E76AE00BBDAC0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362657A205E76AE00BBDAC0 /* ProfileViewController.swift */; };
 		0362657D205E7A7400BBDAC0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362657C205E7A7400BBDAC0 /* UserService.swift */; };
-		03626585205E7E9700BBDAC0 /* FastLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03626584205E7E9700BBDAC0 /* FastLoginTests.swift */; };
+		03626585205E7E9700BBDAC0 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03626584205E7E9700BBDAC0 /* LoginViewControllerTests.swift */; };
 		036C6D28205CF08900C5EE9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C6D27205CF08900C5EE9A /* AppDelegate.swift */; };
 		036C6D2A205CF08900C5EE9A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C6D29205CF08900C5EE9A /* LoginViewController.swift */; };
 		036C6D2D205CF08900C5EE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036C6D2B205CF08900C5EE9A /* Main.storyboard */; };
@@ -37,7 +37,7 @@
 		0362657A205E76AE00BBDAC0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0362657C205E7A7400BBDAC0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		03626582205E7E9700BBDAC0 /* FastLoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03626584205E7E9700BBDAC0 /* FastLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastLoginTests.swift; sourceTree = "<group>"; };
+		03626584205E7E9700BBDAC0 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		03626586205E7E9700BBDAC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		036C6D24205CF08900C5EE9A /* FastLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		036C6D27205CF08900C5EE9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		03626583205E7E9700BBDAC0 /* FastLoginTests */ = {
 			isa = PBXGroup;
 			children = (
-				03626584205E7E9700BBDAC0 /* FastLoginTests.swift */,
+				03626584205E7E9700BBDAC0 /* LoginViewControllerTests.swift */,
 				03626586205E7E9700BBDAC0 /* Info.plist */,
 			);
 			path = FastLoginTests;
@@ -354,7 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03626585205E7E9700BBDAC0 /* FastLoginTests.swift in Sources */,
+				03626585205E7E9700BBDAC0 /* LoginViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
