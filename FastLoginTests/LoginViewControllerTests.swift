@@ -23,16 +23,13 @@ class LoginViewControllerTests: XCTestCase {
   func testLoginSuccess_changeWindowRootViewController() {
     // given
     _ = self.viewController.view // loadView
-    self.viewController.usernameField.text = "fast"
-    self.viewController.passwordField.text = "campus"
+
+    let authService = StubAuthService()
+    authService.stubbedLoginResult = .success
+    self.viewController.authService = authService
 
     // when
     self.viewController.login()
-
-    // wait
-    let expectation = XCTestExpectation()
-    DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: expectation.fulfill)
-    XCTWaiter().wait(for: [expectation], timeout: 3)
 
     // then
     let window = UIApplication.shared.windows.first
@@ -44,16 +41,13 @@ class LoginViewControllerTests: XCTestCase {
   func testLoginFailure_wrongUsername_presentAlertController() {
     // given
     _ = self.viewController.view // loadView
-    self.viewController.usernameField.text = "WRONG USERNAME"
-    self.viewController.passwordField.text = "campus123"
+
+    let authService = StubAuthService()
+    authService.stubbedLoginResult = .failure(.wrongUsername)
+    self.viewController.authService = authService
 
     // when
     self.viewController.login()
-
-    // wait
-    let expectation = XCTestExpectation()
-    DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: expectation.fulfill)
-    XCTWaiter().wait(for: [expectation], timeout: 3)
 
     // then
     let alertController = self.viewController.presentedViewController as? UIAlertController
@@ -64,16 +58,13 @@ class LoginViewControllerTests: XCTestCase {
   func testLoginFailure_wrongPassword_presentAlertController() {
     // given
     _ = self.viewController.view // loadView
-    self.viewController.usernameField.text = "fast"
-    self.viewController.passwordField.text = "WRONG PASSWORD"
+
+    let authService = StubAuthService()
+    authService.stubbedLoginResult = .failure(.wrongPassword)
+    self.viewController.authService = authService
 
     // when
     self.viewController.login()
-
-    // wait
-    let expectation = XCTestExpectation()
-    DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: expectation.fulfill)
-    XCTWaiter().wait(for: [expectation], timeout: 3)
 
     // then
     let alertController = self.viewController.presentedViewController as? UIAlertController
