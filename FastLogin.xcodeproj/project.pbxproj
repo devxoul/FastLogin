@@ -10,6 +10,7 @@
 		03626576205D9BD800BBDAC0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03626575205D9BD800BBDAC0 /* AuthService.swift */; };
 		03626579205E762700BBDAC0 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03626577205E762700BBDAC0 /* Profile.storyboard */; };
 		0362657B205E76AE00BBDAC0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362657A205E76AE00BBDAC0 /* ProfileViewController.swift */; };
+		0362657D205E7A7400BBDAC0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362657C205E7A7400BBDAC0 /* UserService.swift */; };
 		036C6D28205CF08900C5EE9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C6D27205CF08900C5EE9A /* AppDelegate.swift */; };
 		036C6D2A205CF08900C5EE9A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C6D29205CF08900C5EE9A /* LoginViewController.swift */; };
 		036C6D2D205CF08900C5EE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036C6D2B205CF08900C5EE9A /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		03626575205D9BD800BBDAC0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		03626578205E762700BBDAC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		0362657A205E76AE00BBDAC0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0362657C205E7A7400BBDAC0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		036C6D24205CF08900C5EE9A /* FastLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		036C6D27205CF08900C5EE9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		036C6D29205CF08900C5EE9A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			children = (
 				036C6D27205CF08900C5EE9A /* AppDelegate.swift */,
 				03626575205D9BD800BBDAC0 /* AuthService.swift */,
+				0362657C205E7A7400BBDAC0 /* UserService.swift */,
 				036C6D29205CF08900C5EE9A /* LoginViewController.swift */,
 				0362657A205E76AE00BBDAC0 /* ProfileViewController.swift */,
 				036C6D2B205CF08900C5EE9A /* Main.storyboard */,
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				036C6D2A205CF08900C5EE9A /* LoginViewController.swift in Sources */,
+				0362657D205E7A7400BBDAC0 /* UserService.swift in Sources */,
 				036C6D28205CF08900C5EE9A /* AppDelegate.swift in Sources */,
 				03626576205D9BD800BBDAC0 /* AuthService.swift in Sources */,
 				0362657B205E76AE00BBDAC0 /* ProfileViewController.swift in Sources */,
