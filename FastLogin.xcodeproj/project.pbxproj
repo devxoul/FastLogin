@@ -11,6 +11,7 @@
 		03626579205E762700BBDAC0 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03626577205E762700BBDAC0 /* Profile.storyboard */; };
 		0362657B205E76AE00BBDAC0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362657A205E76AE00BBDAC0 /* ProfileViewController.swift */; };
 		0362657D205E7A7400BBDAC0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362657C205E7A7400BBDAC0 /* UserService.swift */; };
+		03626585205E7E9700BBDAC0 /* FastLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03626584205E7E9700BBDAC0 /* FastLoginTests.swift */; };
 		036C6D28205CF08900C5EE9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C6D27205CF08900C5EE9A /* AppDelegate.swift */; };
 		036C6D2A205CF08900C5EE9A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C6D29205CF08900C5EE9A /* LoginViewController.swift */; };
 		036C6D2D205CF08900C5EE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036C6D2B205CF08900C5EE9A /* Main.storyboard */; };
@@ -19,11 +20,24 @@
 		4957A62B6B4B65398C0E7217 /* Pods_FastLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43EFD74A2CCC1E823DB3492 /* Pods_FastLogin.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		03626587205E7E9700BBDAC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 036C6D1C205CF08900C5EE9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 036C6D23205CF08900C5EE9A;
+			remoteInfo = FastLogin;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		03626575205D9BD800BBDAC0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		03626578205E762700BBDAC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		0362657A205E76AE00BBDAC0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0362657C205E7A7400BBDAC0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		03626582205E7E9700BBDAC0 /* FastLoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03626584205E7E9700BBDAC0 /* FastLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastLoginTests.swift; sourceTree = "<group>"; };
+		03626586205E7E9700BBDAC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		036C6D24205CF08900C5EE9A /* FastLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		036C6D27205CF08900C5EE9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		036C6D29205CF08900C5EE9A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +51,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0362657F205E7E9700BBDAC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		036C6D21205CF08900C5EE9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,10 +69,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03626583205E7E9700BBDAC0 /* FastLoginTests */ = {
+			isa = PBXGroup;
+			children = (
+				03626584205E7E9700BBDAC0 /* FastLoginTests.swift */,
+				03626586205E7E9700BBDAC0 /* Info.plist */,
+			);
+			path = FastLoginTests;
+			sourceTree = "<group>";
+		};
 		036C6D1B205CF08900C5EE9A = {
 			isa = PBXGroup;
 			children = (
 				036C6D26205CF08900C5EE9A /* FastLogin */,
+				03626583205E7E9700BBDAC0 /* FastLoginTests */,
 				036C6D25205CF08900C5EE9A /* Products */,
 				2F671E9923E7061B16C947C8 /* Pods */,
 				78C678D1C24B007C75A86859 /* Frameworks */,
@@ -62,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				036C6D24205CF08900C5EE9A /* FastLogin.app */,
+				03626582205E7E9700BBDAC0 /* FastLoginTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +135,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		03626581205E7E9700BBDAC0 /* FastLoginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0362658B205E7E9700BBDAC0 /* Build configuration list for PBXNativeTarget "FastLoginTests" */;
+			buildPhases = (
+				0362657E205E7E9700BBDAC0 /* Sources */,
+				0362657F205E7E9700BBDAC0 /* Frameworks */,
+				03626580205E7E9700BBDAC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03626588205E7E9700BBDAC0 /* PBXTargetDependency */,
+			);
+			name = FastLoginTests;
+			productName = FastLoginTests;
+			productReference = 03626582205E7E9700BBDAC0 /* FastLoginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		036C6D23205CF08900C5EE9A /* FastLogin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 036C6D36205CF08900C5EE9A /* Build configuration list for PBXNativeTarget "FastLogin" */;
@@ -133,6 +183,11 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Suyeol Jeon";
 				TargetAttributes = {
+					03626581205E7E9700BBDAC0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 036C6D23205CF08900C5EE9A;
+					};
 					036C6D23205CF08900C5EE9A = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -153,11 +208,19 @@
 			projectRoot = "";
 			targets = (
 				036C6D23205CF08900C5EE9A /* FastLogin */,
+				03626581205E7E9700BBDAC0 /* FastLoginTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		03626580205E7E9700BBDAC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		036C6D22205CF08900C5EE9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,6 +291,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0362657E205E7E9700BBDAC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03626585205E7E9700BBDAC0 /* FastLoginTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		036C6D20205CF08900C5EE9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,6 +312,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03626588205E7E9700BBDAC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 036C6D23205CF08900C5EE9A /* FastLogin */;
+			targetProxy = 03626587205E7E9700BBDAC0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		03626577205E762700BBDAC0 /* Profile.storyboard */ = {
@@ -270,6 +349,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		03626589205E7E9700BBDAC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2C267LBVY;
+				INFOPLIST_FILE = FastLoginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.FastLoginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FastLogin.app/FastLogin";
+			};
+			name = Debug;
+		};
+		0362658A205E7E9700BBDAC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2C267LBVY;
+				INFOPLIST_FILE = FastLoginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.FastLoginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FastLogin.app/FastLogin";
+			};
+			name = Release;
+		};
 		036C6D34205CF08900C5EE9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -412,6 +523,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0362658B205E7E9700BBDAC0 /* Build configuration list for PBXNativeTarget "FastLoginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03626589205E7E9700BBDAC0 /* Debug */,
+				0362658A205E7E9700BBDAC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		036C6D1F205CF08900C5EE9A /* Build configuration list for PBXProject "FastLogin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
