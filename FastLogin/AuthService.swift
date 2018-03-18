@@ -19,7 +19,11 @@ enum LoginError: Error {
   case wrongPassword
 }
 
-final class AuthService {
+protocol AuthServiceType {
+  func login(username: String?, password: String?, completion: @escaping (LoginResult) -> Void)
+}
+
+final class AuthService: AuthServiceType {
   static let shared = AuthService()
 
   func login(username: String?, password: String?, completion: @escaping (LoginResult) -> Void) {
