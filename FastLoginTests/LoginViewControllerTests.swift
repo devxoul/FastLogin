@@ -25,6 +25,17 @@ class LoginViewControllerTests: XCTestCase {
     XCTAssertNotNil(self.viewController.usernameField.placeholder)
   }
 
+  func testUsernameField_isFirstResponder() {
+    // given
+    UIApplication.shared.keyWindow?.rootViewController = self.viewController
+
+    // when
+    _ = self.viewController.view // loadView
+
+    // then
+    XCTAssertTrue(self.viewController.usernameField.isFirstResponder)
+  }
+
   func testUsernameField_resetBackgroundColorWhenChangeText() {
     // given
     _ = self.viewController.view // loadView

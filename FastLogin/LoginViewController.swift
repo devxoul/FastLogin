@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.usernameField.becomeFirstResponder()
   }
 
   @IBAction func login() {
