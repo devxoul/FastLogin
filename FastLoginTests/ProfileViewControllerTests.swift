@@ -48,6 +48,7 @@ final class ProfileViewControllerTests: XCTestCase {
 
   func testLogoutButton_changeWindowRootViewController() {
     // given
+    self.viewController.sceneSwitcher = SceneSwitcher(window: UIApplication.shared.windows.first)
     let logoutButton = viewController.view.subviews
       .flatMap { $0 as? UIButton }
       .first { $0.title(for: .normal) == "Sign out" }

@@ -22,6 +22,7 @@ class LoginViewControllerTests: XCTestCase {
 
   func testLoginSuccess_changeWindowRootViewController() {
     // given
+    self.viewController.sceneSwitcher = SceneSwitcher(window: UIApplication.shared.windows.first)
     _ = self.viewController.view // loadView
 
     let authService = StubAuthService()
