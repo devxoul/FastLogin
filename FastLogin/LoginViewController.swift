@@ -45,3 +45,17 @@ class LoginViewController: UIViewController {
     }
   }
 }
+
+struct LoginStoryboard {
+  let authService: AuthServiceType
+  let sceneSwitcher: SceneSwitcher
+
+  func initialViewController() -> UIViewController? {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let navigationController = storyboard.instantiateInitialViewController() as? UINavigationController
+    let loginViewController = navigationController?.topViewController as? LoginViewController
+    loginViewController?.authService = self.authService
+    loginViewController?.sceneSwitcher = self.sceneSwitcher
+    return navigationController
+  }
+}
