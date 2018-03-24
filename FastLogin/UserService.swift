@@ -9,7 +9,11 @@
 import Alamofire
 import CodableAlamofire
 
-final class UserService {
+protocol UserServiceType {
+  func currentUser(completion: @escaping (Result<String>) -> Void)
+}
+
+final class UserService: UserServiceType {
   static let shared = UserService()
 
   func currentUser(completion: @escaping (Result<String>) -> Void) {
