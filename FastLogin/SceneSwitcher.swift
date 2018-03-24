@@ -22,6 +22,7 @@ final class SceneSwitcher {
     let navigationController = storyboard.instantiateInitialViewController() as? UINavigationController
     let loginViewController = navigationController?.topViewController as? LoginViewController
     loginViewController?.authService = self.authService
+    loginViewController?.sceneSwitcher = self
     self.window?.rootViewController = navigationController
   }
 

@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
   @IBOutlet var joinButton: UIButton!
 
   var authService: AuthServiceType?
+  var sceneSwitcher: SceneSwitcher?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,9 +28,7 @@ class LoginViewController: UIViewController {
     self.authService?.login(username: username, password: password) { result in
       switch result {
       case .success:
-        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
-        let window = UIApplication.shared.windows.first
-        window?.rootViewController = storyboard.instantiateInitialViewController()
+        self.sceneSwitcher?.presentProfile()
 
       case .failure(.wrongUsername):
         let message = "No such user"
