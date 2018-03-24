@@ -9,7 +9,9 @@
 import UIKit
 
 final class ProfileViewController: UIViewController {
+  @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
   @IBOutlet var welcomeLabel: UILabel!
+  @IBOutlet var logoutButton: UIButton!
 
   var userService: UserServiceType?
   var sceneSwitcher: SceneSwitcherType?
@@ -17,7 +19,15 @@ final class ProfileViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    self.activityIndicatorView.isHidden = false
+    self.welcomeLabel.isHidden = true
+    self.logoutButton.isHidden = true
+
     self.userService?.currentUser { result in
+      self.activityIndicatorView.isHidden = true
+      self.welcomeLabel.isHidden = false
+      self.logoutButton.isHidden = false
+
       switch result {
       case let .success(username):
         self.welcomeLabel.text = "Welcome, \(username)!"

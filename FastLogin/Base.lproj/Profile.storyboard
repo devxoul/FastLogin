@@ -31,11 +31,16 @@
                                     <action selector="logout" destination="yXy-xU-s2v" eventType="touchUpInside" id="3nv-dg-mVk"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jVu-zs-Xdq">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sbL-04-o2o" firstAttribute="centerY" secondItem="k3y-99-58B" secondAttribute="centerY" id="3De-O9-2Yb"/>
+                            <constraint firstItem="jVu-zs-Xdq" firstAttribute="centerY" secondItem="k3y-99-58B" secondAttribute="centerY" id="71i-Og-uvY"/>
                             <constraint firstItem="sbL-04-o2o" firstAttribute="centerX" secondItem="k3y-99-58B" secondAttribute="centerX" id="Ghm-6l-Rlb"/>
+                            <constraint firstItem="jVu-zs-Xdq" firstAttribute="centerX" secondItem="k3y-99-58B" secondAttribute="centerX" id="Ks1-Xg-adz"/>
                             <constraint firstItem="zU6-wR-dnG" firstAttribute="top" secondItem="sbL-04-o2o" secondAttribute="bottom" constant="40" id="leN-xw-0Fp"/>
                             <constraint firstItem="zU6-wR-dnG" firstAttribute="centerX" secondItem="k3y-99-58B" secondAttribute="centerX" id="zhP-kC-b3W"/>
                         </constraints>
@@ -43,6 +48,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="g4c-9i-Jua"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="jVu-zs-Xdq" id="ZCn-sj-EPC"/>
+                        <outlet property="logoutButton" destination="zU6-wR-dnG" id="k9O-sy-xtR"/>
                         <outlet property="welcomeLabel" destination="sbL-04-o2o" id="HSq-iE-qEk"/>
                     </connections>
                 </viewController>
