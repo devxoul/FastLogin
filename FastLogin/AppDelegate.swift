@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     let sceneSwitcher = SceneSwitcher(window: self.window)
     sceneSwitcher.loginStoryboard = LoginStoryboard(authService: AuthService.shared, sceneSwitcher: sceneSwitcher)
-    sceneSwitcher.userService = UserService.shared
+    sceneSwitcher.profileStoryboard = ProfileStoryboard(userService: UserService.shared, sceneSwitcher: sceneSwitcher)
     sceneSwitcher.presentLogin()
     return true
   }

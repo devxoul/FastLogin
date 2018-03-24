@@ -11,7 +11,7 @@ import UIKit
 final class SceneSwitcher {
   let window: UIWindow?
   var loginStoryboard: LoginStoryboard?
-  var userService: UserServiceType?
+  var profileStoryboard: ProfileStoryboard?
 
   init(window: UIWindow?) {
     self.window = window
@@ -22,11 +22,6 @@ final class SceneSwitcher {
   }
 
   func presentProfile() {
-    let storyboard = UIStoryboard(name: "Profile", bundle: nil)
-    let navigationController = storyboard.instantiateInitialViewController() as? UINavigationController
-    let profileViewController = navigationController?.topViewController as? ProfileViewController
-    profileViewController?.userService = self.userService
-    profileViewController?.sceneSwitcher = self
-    self.window?.rootViewController = navigationController
+    self.window?.rootViewController = self.profileStoryboard?.initialViewController()
   }
 }
