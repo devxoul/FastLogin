@@ -20,6 +20,16 @@ class LoginViewControllerTests: XCTestCase {
     UIApplication.shared.windows.first?.rootViewController = navigationController
   }
 
+  func testUsernameField_hasPlaceholder() {
+    _ = self.viewController.view // loadView
+    XCTAssertNotNil(self.viewController.usernameField.placeholder)
+  }
+
+  func testPasswordField_hasPlaceholder() {
+    _ = self.viewController.view // loadView
+    XCTAssertNotNil(self.viewController.passwordField.placeholder)
+  }
+
   func testLoginSuccess_changeWindowRootViewController() {
     // given
     let sceneSwitcher = SpySceneSwitcher()
