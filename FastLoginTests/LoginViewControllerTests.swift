@@ -35,6 +35,40 @@ class LoginViewControllerTests: XCTestCase {
     XCTAssertTrue(viewController.passwordField.isSecureTextEntry)
   }
 
+  func testLogin_disableComponentsWhileLoading() {
+    // given
+    let authService = StubAuthService()
+    authService.stubbedLoginResult = nil
+    self.viewController.authService = authService
+    _ = self.viewController.view // loadView
+
+    // when
+    self.viewController.login()
+
+    // then
+    XCTAssertFalse(self.viewController.usernameField.isEnabled)
+    XCTAssertFalse(self.viewController.passwordField.isEnabled)
+    XCTAssertFalse(self.viewController.loginButton.isEnabled)
+    XCTAssertFalse(self.viewController.joinButton.isEnabled)
+  }
+
+  func testLogin_enableComponentsAfterLoading() {
+    // given
+    let authService = StubAuthService()
+    authService.stubbedLoginResult = .failure(.wrongPassword)
+    self.viewController.authService = authService
+    _ = self.viewController.view // loadView
+
+    // when
+    self.viewController.login()
+
+    // then
+    XCTAssertTrue(self.viewController.usernameField.isEnabled)
+    XCTAssertTrue(self.viewController.passwordField.isEnabled)
+    XCTAssertTrue(self.viewController.loginButton.isEnabled)
+    XCTAssertTrue(self.viewController.joinButton.isEnabled)
+  }
+
   func testLoginSuccess_changeWindowRootViewController() {
     // given
     let sceneSwitcher = SpySceneSwitcher()

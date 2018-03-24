@@ -22,10 +22,12 @@ class LoginViewController: UIViewController {
   }
 
   @IBAction func login() {
+    self.setComponentsEnabled(false)
     let username = self.usernameField.text
     let password = self.passwordField.text
 
     self.authService?.login(username: username, password: password) { result in
+      self.setComponentsEnabled(true)
       switch result {
       case .success:
         self.sceneSwitcher?.presentProfile()
@@ -43,6 +45,13 @@ class LoginViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
       }
     }
+  }
+
+  private func setComponentsEnabled(_ isEnabled: Bool) {
+    self.usernameField.isEnabled = isEnabled
+    self.passwordField.isEnabled = isEnabled
+    self.loginButton.isEnabled = isEnabled
+    self.joinButton.isEnabled = isEnabled
   }
 }
 
