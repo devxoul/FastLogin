@@ -128,6 +128,21 @@ class LoginViewControllerTests: XCTestCase {
     XCTAssert(self.viewController.usernameField.backgroundColor != originalBackgroundColor)
   }
 
+  func testLoginFailure_wrongUsername_becomeFirstResponder() {
+    // given
+    UIApplication.shared.keyWindow?.rootViewController = self.viewController
+
+    let authService = StubAuthService()
+    authService.stubbedLoginResult = .failure(.wrongUsername)
+    self.viewController.authService = authService
+
+    // when
+    self.viewController.login()
+
+    // then
+    XCTAssertTrue(self.viewController.usernameField.isFirstResponder)
+  }
+
   func testLoginFailure_wrongPassword_changeBackgroundColor() {
     // given
     _ = self.viewController.view // loadView
@@ -142,6 +157,21 @@ class LoginViewControllerTests: XCTestCase {
 
     // then
     XCTAssert(self.viewController.passwordField.backgroundColor != originalBackgroundColor)
+  }
+
+  func testLoginFailure_wrongPassword_becomeFirstResponder() {
+    // given
+    UIApplication.shared.keyWindow?.rootViewController = self.viewController
+
+    let authService = StubAuthService()
+    authService.stubbedLoginResult = .failure(.wrongPassword)
+    self.viewController.authService = authService
+
+    // when
+    self.viewController.login()
+
+    // then
+    XCTAssertTrue(self.viewController.passwordField.isFirstResponder)
   }
 
   func testJoinButton_pushCreateAccountViewController() {

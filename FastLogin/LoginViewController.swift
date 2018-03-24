@@ -34,9 +34,11 @@ class LoginViewController: UIViewController {
 
       case .failure(.wrongUsername):
         self.usernameField.backgroundColor = UIColor.red.withAlphaComponent(0.2)
+        self.usernameField.becomeFirstResponder()
 
       case .failure(.wrongPassword):
         self.passwordField.backgroundColor = UIColor.red.withAlphaComponent(0.2)
+        self.passwordField.becomeFirstResponder()
       }
     }
   }
