@@ -30,6 +30,11 @@ class LoginViewControllerTests: XCTestCase {
     XCTAssertNotNil(self.viewController.passwordField.placeholder)
   }
 
+  func testPasswordField_secureTextEntry() {
+    _ = self.viewController.view // loadView
+    XCTAssertTrue(viewController.passwordField.isSecureTextEntry)
+  }
+
   func testLoginSuccess_changeWindowRootViewController() {
     // given
     let sceneSwitcher = SpySceneSwitcher()
