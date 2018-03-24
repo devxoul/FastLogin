@@ -8,7 +8,12 @@
 
 import UIKit
 
-final class SceneSwitcher {
+protocol SceneSwitcherType {
+  func presentLogin()
+  func presentProfile()
+}
+
+final class SceneSwitcher: SceneSwitcherType {
   let window: UIWindow?
   var loginStoryboard: LoginStoryboard?
   var profileStoryboard: ProfileStoryboard?

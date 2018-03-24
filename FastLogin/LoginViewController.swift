@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
   @IBOutlet var joinButton: UIButton!
 
   var authService: AuthServiceType?
-  var sceneSwitcher: SceneSwitcher?
+  var sceneSwitcher: SceneSwitcherType?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -48,7 +48,7 @@ class LoginViewController: UIViewController {
 
 struct LoginStoryboard {
   let authService: AuthServiceType
-  let sceneSwitcher: SceneSwitcher
+  let sceneSwitcher: SceneSwitcherType
 
   func initialViewController() -> UIViewController? {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)

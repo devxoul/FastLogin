@@ -12,7 +12,7 @@ final class ProfileViewController: UIViewController {
   @IBOutlet var welcomeLabel: UILabel!
 
   var userService: UserServiceType?
-  var sceneSwitcher: SceneSwitcher?
+  var sceneSwitcher: SceneSwitcherType?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -35,7 +35,7 @@ final class ProfileViewController: UIViewController {
 
 struct ProfileStoryboard {
   let userService: UserServiceType
-  let sceneSwitcher: SceneSwitcher
+  let sceneSwitcher: SceneSwitcherType
 
   func initialViewController() -> UIViewController? {
     let storyboard = UIStoryboard(name: "Profile", bundle: nil)
