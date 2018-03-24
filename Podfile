@@ -5,4 +5,8 @@ target 'FastLogin' do
 
   pod 'Alamofire'
   pod 'CodableAlamofire'
+
+  target 'FastLoginTests' do
+    inherit! :search_paths
+  end
 end

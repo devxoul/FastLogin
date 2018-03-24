@@ -18,6 +18,7 @@
 		036C6D2F205CF08900C5EE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036C6D2E205CF08900C5EE9A /* Assets.xcassets */; };
 		036C6D32205CF08900C5EE9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036C6D30205CF08900C5EE9A /* LaunchScreen.storyboard */; };
 		4957A62B6B4B65398C0E7217 /* Pods_FastLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43EFD74A2CCC1E823DB3492 /* Pods_FastLogin.framework */; };
+		A7564D546BCF4B6DA3A243AD /* Pods_FastLoginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D916644A736D76F0E3BF4107 /* Pods_FastLoginTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +46,12 @@
 		036C6D2E205CF08900C5EE9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		036C6D31205CF08900C5EE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		036C6D33205CF08900C5EE9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DDDDDC369E6C7A9CBB7857D /* Pods-FastLoginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastLoginTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastLoginTests/Pods-FastLoginTests.release.xcconfig"; sourceTree = "<group>"; };
 		787C49FA7968DA49BD0DE2DB /* Pods-FastLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastLogin.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastLogin/Pods-FastLogin.release.xcconfig"; sourceTree = "<group>"; };
 		B50732A3CA73A145E66CD1B8 /* Pods-FastLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastLogin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastLogin/Pods-FastLogin.debug.xcconfig"; sourceTree = "<group>"; };
+		D916644A736D76F0E3BF4107 /* Pods_FastLoginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastLoginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43EFD74A2CCC1E823DB3492 /* Pods_FastLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACB654DDC9788A8371E0D32 /* Pods-FastLoginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastLoginTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastLoginTests/Pods-FastLoginTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7564D546BCF4B6DA3A243AD /* Pods_FastLoginTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +125,8 @@
 			children = (
 				B50732A3CA73A145E66CD1B8 /* Pods-FastLogin.debug.xcconfig */,
 				787C49FA7968DA49BD0DE2DB /* Pods-FastLogin.release.xcconfig */,
+				FACB654DDC9788A8371E0D32 /* Pods-FastLoginTests.debug.xcconfig */,
+				0DDDDDC369E6C7A9CBB7857D /* Pods-FastLoginTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -128,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				F43EFD74A2CCC1E823DB3492 /* Pods_FastLogin.framework */,
+				D916644A736D76F0E3BF4107 /* Pods_FastLoginTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -139,9 +147,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0362658B205E7E9700BBDAC0 /* Build configuration list for PBXNativeTarget "FastLoginTests" */;
 			buildPhases = (
+				7D88DB476251FE52FAA19985 /* [CP] Check Pods Manifest.lock */,
 				0362657E205E7E9700BBDAC0 /* Sources */,
 				0362657F205E7E9700BBDAC0 /* Frameworks */,
 				03626580205E7E9700BBDAC0 /* Resources */,
+				9BDFA9BD4C7DF83B777F6572 /* [CP] Embed Pods Frameworks */,
+				1348F0EB345910392C6F44EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +246,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1348F0EB345910392C6F44EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FastLoginTests/Pods-FastLoginTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		403CDF76E35CDDF131216AD6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -248,6 +274,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FastLogin/Pods-FastLogin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D88DB476251FE52FAA19985 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FastLoginTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		85D868754764B2E8DE30529D /* [CP] Embed Pods Frameworks */ = {
@@ -268,6 +312,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FastLogin/Pods-FastLogin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BDFA9BD4C7DF83B777F6572 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FastLoginTests/Pods-FastLoginTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DB57BAD281EDDD75514560B1 /* [CP] Check Pods Manifest.lock */ = {
@@ -351,6 +410,7 @@
 /* Begin XCBuildConfiguration section */
 		03626589205E7E9700BBDAC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FACB654DDC9788A8371E0D32 /* Pods-FastLoginTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -367,6 +427,7 @@
 		};
 		0362658A205E7E9700BBDAC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DDDDDC369E6C7A9CBB7857D /* Pods-FastLoginTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
