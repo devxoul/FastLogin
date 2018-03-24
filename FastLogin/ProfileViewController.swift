@@ -32,3 +32,17 @@ final class ProfileViewController: UIViewController {
     self.sceneSwitcher?.presentLogin()
   }
 }
+
+struct ProfileStoryboard {
+  let userService: UserServiceType
+  let sceneSwitcher: SceneSwitcher
+
+  func initialViewController() -> UIViewController? {
+    let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+    let navigationController = storyboard.instantiateInitialViewController() as? UINavigationController
+    let profileViewController = navigationController?.topViewController as? ProfileViewController
+    profileViewController?.userService = self.userService
+    profileViewController?.sceneSwitcher = self.sceneSwitcher
+    return navigationController
+  }
+}
