@@ -20,7 +20,7 @@ final class ProfileViewControllerTests: XCTestCase {
     UIApplication.shared.windows.first?.rootViewController = navigationController
   }
 
-  func testWelcomeLabel_presentUsername() {
+  func testWelcomeLabel_presentUsername_whenFetchingCurrentUserSuccess() {
     // given
     let userService = StubUserService()
     userService.stubbedCurrentUserResult = .success("devxoul")
@@ -31,6 +31,19 @@ final class ProfileViewControllerTests: XCTestCase {
 
     // then
     XCTAssert(viewController.welcomeLabel.text?.contains("devxoul") == true)
+  }
+
+  func testWelcomeLabel_presentErrorMessage_whenFetchingCurrentUserFailure() {
+    // given
+    let userService = StubUserService()
+    userService.stubbedCurrentUserResult = .failure(NSError())
+    self.viewController.userService = userService
+
+    // when
+    _ = self.viewController.view // loadView
+
+    // then
+    XCTAssert(viewController.welcomeLabel.text?.contains("Error") == true)
   }
 
   func testLogoutButton_changeWindowRootViewController() {
