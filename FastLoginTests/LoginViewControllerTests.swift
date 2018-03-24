@@ -22,7 +22,8 @@ class LoginViewControllerTests: XCTestCase {
 
   func testLoginSuccess_changeWindowRootViewController() {
     // given
-    self.viewController.sceneSwitcher = SceneSwitcher(window: UIApplication.shared.windows.first)
+    let sceneSwitcher = SpySceneSwitcher()
+    self.viewController.sceneSwitcher = sceneSwitcher
     _ = self.viewController.view // loadView
 
     let authService = StubAuthService()
@@ -33,10 +34,7 @@ class LoginViewControllerTests: XCTestCase {
     self.viewController.login()
 
     // then
-    let window = UIApplication.shared.windows.first
-    let navigationController = window?.rootViewController as? UINavigationController
-    let rootViewController = navigationController?.viewControllers.first
-    XCTAssert(rootViewController is ProfileViewController)
+    XCTAssertTrue(sceneSwitcher.isProfilePresented)
   }
 
   func testLoginFailure_wrongUsername_presentAlertController() {

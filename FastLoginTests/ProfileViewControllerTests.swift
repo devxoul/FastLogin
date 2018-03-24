@@ -48,7 +48,8 @@ final class ProfileViewControllerTests: XCTestCase {
 
   func testLogoutButton_changeWindowRootViewController() {
     // given
-    self.viewController.sceneSwitcher = SceneSwitcher(window: UIApplication.shared.windows.first)
+    let sceneSwitcher = SpySceneSwitcher()
+    self.viewController.sceneSwitcher = sceneSwitcher
     let logoutButton = viewController.view.subviews
       .flatMap { $0 as? UIButton }
       .first { $0.title(for: .normal) == "Sign out" }
@@ -57,9 +58,6 @@ final class ProfileViewControllerTests: XCTestCase {
     logoutButton?.sendActions(for: .touchUpInside)
 
     // then
-    let window = UIApplication.shared.windows.first
-    let navigationController = window?.rootViewController as? UINavigationController
-    let rootViewController = navigationController?.viewControllers.first
-    XCTAssert(rootViewController is LoginViewController)
+    XCTAssertTrue(sceneSwitcher.isLoginPresented)
   }
 }
