@@ -19,4 +19,17 @@ final class ProfileViewControllerTests: XCTestCase {
     self.viewController = navigationController?.viewControllers.first as? ProfileViewController
     UIApplication.shared.windows.first?.rootViewController = navigationController
   }
+
+  func testWelcomeLabel_presentUsername() {
+    // when
+    _ = self.viewController.view // loadView
+
+    // wait
+    let expectation = XCTestExpectation()
+    DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: expectation.fulfill)
+    XCTWaiter().wait(for: [expectation], timeout: 3)
+
+    // then
+    XCTAssert(viewController.welcomeLabel.text?.contains("fast") == true)
+  }
 }
