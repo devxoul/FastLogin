@@ -33,16 +33,10 @@ class LoginViewController: UIViewController {
         self.sceneSwitcher?.presentProfile()
 
       case .failure(.wrongUsername):
-        let message = "No such user"
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        self.usernameField.backgroundColor = UIColor.red.withAlphaComponent(0.2)
 
       case .failure(.wrongPassword):
-        let message = "Wrong password"
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        self.passwordField.backgroundColor = UIColor.red.withAlphaComponent(0.2)
       }
     }
   }
@@ -52,6 +46,10 @@ class LoginViewController: UIViewController {
     self.passwordField.isEnabled = isEnabled
     self.loginButton.isEnabled = isEnabled
     self.joinButton.isEnabled = isEnabled
+  }
+
+  @IBAction private func resetBackgroundColor(of textField: UITextField) {
+    textField.backgroundColor = nil
   }
 }
 

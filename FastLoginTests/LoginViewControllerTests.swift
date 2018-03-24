@@ -25,6 +25,19 @@ class LoginViewControllerTests: XCTestCase {
     XCTAssertNotNil(self.viewController.usernameField.placeholder)
   }
 
+  func testUsernameField_resetBackgroundColorWhenChangeText() {
+    // given
+    _ = self.viewController.view // loadView
+    let originalBackgroundColor = self.viewController.usernameField.backgroundColor
+    self.viewController.usernameField.backgroundColor = .yellow
+
+    // when
+    self.viewController.usernameField.sendActions(for: .editingChanged)
+
+    // then
+    XCTAssert(self.viewController.usernameField.backgroundColor == originalBackgroundColor)
+  }
+
   func testPasswordField_hasPlaceholder() {
     _ = self.viewController.view // loadView
     XCTAssertNotNil(self.viewController.passwordField.placeholder)
@@ -33,6 +46,19 @@ class LoginViewControllerTests: XCTestCase {
   func testPasswordField_secureTextEntry() {
     _ = self.viewController.view // loadView
     XCTAssertTrue(viewController.passwordField.isSecureTextEntry)
+  }
+
+  func testPasswordField_resetBackgroundColorWhenChangeText() {
+    // given
+    _ = self.viewController.view // loadView
+    let originalBackgroundColor = self.viewController.passwordField.backgroundColor
+    self.viewController.passwordField.backgroundColor = .yellow
+
+    // when
+    self.viewController.passwordField.sendActions(for: .editingChanged)
+
+    // then
+    XCTAssert(self.viewController.passwordField.backgroundColor == originalBackgroundColor)
   }
 
   func testLogin_disableComponentsWhileLoading() {
@@ -86,9 +112,10 @@ class LoginViewControllerTests: XCTestCase {
     XCTAssertTrue(sceneSwitcher.isProfilePresented)
   }
 
-  func testLoginFailure_wrongUsername_presentAlertController() {
+  func testLoginFailure_wrongUsername_changeBackgroundColor() {
     // given
     _ = self.viewController.view // loadView
+    let originalBackgroundColor = self.viewController.usernameField.backgroundColor
 
     let authService = StubAuthService()
     authService.stubbedLoginResult = .failure(.wrongUsername)
@@ -98,14 +125,13 @@ class LoginViewControllerTests: XCTestCase {
     self.viewController.login()
 
     // then
-    let alertController = self.viewController.presentedViewController as? UIAlertController
-    XCTAssertNotNil(alertController)
-    XCTAssert(alertController?.message?.lowercased().contains("no such user") == true)
+    XCTAssert(self.viewController.usernameField.backgroundColor != originalBackgroundColor)
   }
 
-  func testLoginFailure_wrongPassword_presentAlertController() {
+  func testLoginFailure_wrongPassword_changeBackgroundColor() {
     // given
     _ = self.viewController.view // loadView
+    let originalBackgroundColor = self.viewController.passwordField.backgroundColor
 
     let authService = StubAuthService()
     authService.stubbedLoginResult = .failure(.wrongPassword)
@@ -115,9 +141,7 @@ class LoginViewControllerTests: XCTestCase {
     self.viewController.login()
 
     // then
-    let alertController = self.viewController.presentedViewController as? UIAlertController
-    XCTAssertNotNil(alertController)
-    XCTAssert(alertController?.message?.lowercased().contains("wrong password") == true)
+    XCTAssert(self.viewController.passwordField.backgroundColor != originalBackgroundColor)
   }
 
   func testJoinButton_pushCreateAccountViewController() {
