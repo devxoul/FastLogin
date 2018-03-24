@@ -20,6 +20,7 @@
 		036C6D2F205CF08900C5EE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036C6D2E205CF08900C5EE9A /* Assets.xcassets */; };
 		036C6D32205CF08900C5EE9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036C6D30205CF08900C5EE9A /* LaunchScreen.storyboard */; };
 		03C85C4120662E010037BBE2 /* StubUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85C4020662E010037BBE2 /* StubUserService.swift */; };
+		03C85C5D2066660F0037BBE2 /* SceneSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85C5C2066660F0037BBE2 /* SceneSwitcher.swift */; };
 		4957A62B6B4B65398C0E7217 /* Pods_FastLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43EFD74A2CCC1E823DB3492 /* Pods_FastLogin.framework */; };
 		A7564D546BCF4B6DA3A243AD /* Pods_FastLoginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D916644A736D76F0E3BF4107 /* Pods_FastLoginTests.framework */; };
 /* End PBXBuildFile section */
@@ -51,8 +52,9 @@
 		036C6D2E205CF08900C5EE9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		036C6D31205CF08900C5EE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		036C6D33205CF08900C5EE9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0DDDDDC369E6C7A9CBB7857D /* Pods-FastLoginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastLoginTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastLoginTests/Pods-FastLoginTests.release.xcconfig"; sourceTree = "<group>"; };
 		03C85C4020662E010037BBE2 /* StubUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubUserService.swift; sourceTree = "<group>"; };
+		03C85C5C2066660F0037BBE2 /* SceneSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneSwitcher.swift; sourceTree = "<group>"; };
+		0DDDDDC369E6C7A9CBB7857D /* Pods-FastLoginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastLoginTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastLoginTests/Pods-FastLoginTests.release.xcconfig"; sourceTree = "<group>"; };
 		787C49FA7968DA49BD0DE2DB /* Pods-FastLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastLogin.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastLogin/Pods-FastLogin.release.xcconfig"; sourceTree = "<group>"; };
 		B50732A3CA73A145E66CD1B8 /* Pods-FastLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastLogin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastLogin/Pods-FastLogin.debug.xcconfig"; sourceTree = "<group>"; };
 		D916644A736D76F0E3BF4107 /* Pods_FastLoginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastLoginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 				036C6D27205CF08900C5EE9A /* AppDelegate.swift */,
 				03626575205D9BD800BBDAC0 /* AuthService.swift */,
 				0362657C205E7A7400BBDAC0 /* UserService.swift */,
+				03C85C5C2066660F0037BBE2 /* SceneSwitcher.swift */,
 				036C6D29205CF08900C5EE9A /* LoginViewController.swift */,
 				0362657A205E76AE00BBDAC0 /* ProfileViewController.swift */,
 				036C6D2B205CF08900C5EE9A /* Main.storyboard */,
@@ -375,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				036C6D2A205CF08900C5EE9A /* LoginViewController.swift in Sources */,
+				03C85C5D2066660F0037BBE2 /* SceneSwitcher.swift in Sources */,
 				0362657D205E7A7400BBDAC0 /* UserService.swift in Sources */,
 				036C6D28205CF08900C5EE9A /* AppDelegate.swift in Sources */,
 				03626576205D9BD800BBDAC0 /* AuthService.swift in Sources */,
