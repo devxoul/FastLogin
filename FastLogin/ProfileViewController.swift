@@ -12,6 +12,7 @@ final class ProfileViewController: UIViewController {
   @IBOutlet var welcomeLabel: UILabel!
 
   var userService: UserServiceType?
+  var sceneSwitcher: SceneSwitcher?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -28,8 +29,6 @@ final class ProfileViewController: UIViewController {
   }
 
   @IBAction private func logout() {
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let window = UIApplication.shared.windows.first
-    window?.rootViewController = storyboard.instantiateInitialViewController()
+    self.sceneSwitcher?.presentLogin()
   }
 }

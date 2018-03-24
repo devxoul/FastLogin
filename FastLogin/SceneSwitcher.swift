@@ -31,6 +31,7 @@ final class SceneSwitcher {
     let navigationController = storyboard.instantiateInitialViewController() as? UINavigationController
     let profileViewController = navigationController?.topViewController as? ProfileViewController
     profileViewController?.userService = self.userService
+    profileViewController?.sceneSwitcher = self
     self.window?.rootViewController = navigationController
   }
 }
