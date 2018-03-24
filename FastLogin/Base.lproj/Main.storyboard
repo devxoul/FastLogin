@@ -24,6 +24,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="focusPasswordField" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="f3A-sm-gxE"/>
                                     <action selector="resetBackgroundColorOf:" destination="BYZ-38-t0r" eventType="editingChanged" id="TIL-EI-pud"/>
                                 </connections>
                             </textField>
@@ -33,6 +34,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
+                                    <action selector="login" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="HNB-Bn-i06"/>
                                     <action selector="resetBackgroundColorOf:" destination="BYZ-38-t0r" eventType="editingChanged" id="CQ0-fz-car"/>
                                 </connections>
                             </textField>

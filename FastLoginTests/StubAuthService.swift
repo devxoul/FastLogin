@@ -10,8 +10,10 @@
 
 final class StubAuthService: AuthServiceType {
   var stubbedLoginResult: LoginResult?
+  var isLoginExecuted: Bool = false
 
   func login(username: String?, password: String?, completion: @escaping (LoginResult) -> Void) {
+    self.isLoginExecuted = true
     if let result = self.stubbedLoginResult {
       completion(result)
     }

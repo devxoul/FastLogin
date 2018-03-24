@@ -44,6 +44,10 @@ class LoginViewController: UIViewController {
     }
   }
 
+  @IBAction func focusPasswordField() {
+    self.passwordField.becomeFirstResponder()
+  }
+
   private func setComponentsEnabled(_ isEnabled: Bool) {
     self.usernameField.isEnabled = isEnabled
     self.passwordField.isEnabled = isEnabled

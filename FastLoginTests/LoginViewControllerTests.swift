@@ -49,6 +49,17 @@ class LoginViewControllerTests: XCTestCase {
     XCTAssert(self.viewController.usernameField.backgroundColor == originalBackgroundColor)
   }
 
+  func testUsernameField_focusPasswordField_whenReturn() {
+    // given
+    UIApplication.shared.keyWindow?.rootViewController = self.viewController
+
+    // when
+    self.viewController.usernameField.sendActions(for: .editingDidEndOnExit)
+
+    // then
+    XCTAssertTrue(self.viewController.passwordField.isFirstResponder)
+  }
+
   func testPasswordField_hasPlaceholder() {
     _ = self.viewController.view // loadView
     XCTAssertNotNil(self.viewController.passwordField.placeholder)
@@ -70,6 +81,19 @@ class LoginViewControllerTests: XCTestCase {
 
     // then
     XCTAssert(self.viewController.passwordField.backgroundColor == originalBackgroundColor)
+  }
+
+  func testPasswordField_tryLogin_whenReturn() {
+    // given
+    let authService = StubAuthService()
+    self.viewController.authService = authService
+    _ = self.viewController.view
+
+    // when
+    self.viewController.passwordField.sendActions(for: .editingDidEndOnExit)
+
+    // then
+    XCTAssertTrue(authService.isLoginExecuted)
   }
 
   func testLogin_disableComponentsWhileLoading() {
