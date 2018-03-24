@@ -19,6 +19,7 @@
 		036C6D2D205CF08900C5EE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036C6D2B205CF08900C5EE9A /* Main.storyboard */; };
 		036C6D2F205CF08900C5EE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036C6D2E205CF08900C5EE9A /* Assets.xcassets */; };
 		036C6D32205CF08900C5EE9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036C6D30205CF08900C5EE9A /* LaunchScreen.storyboard */; };
+		03C85C4120662E010037BBE2 /* StubUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85C4020662E010037BBE2 /* StubUserService.swift */; };
 		4957A62B6B4B65398C0E7217 /* Pods_FastLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43EFD74A2CCC1E823DB3492 /* Pods_FastLogin.framework */; };
 		A7564D546BCF4B6DA3A243AD /* Pods_FastLoginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D916644A736D76F0E3BF4107 /* Pods_FastLoginTests.framework */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		036C6D31205CF08900C5EE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		036C6D33205CF08900C5EE9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DDDDDC369E6C7A9CBB7857D /* Pods-FastLoginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastLoginTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastLoginTests/Pods-FastLoginTests.release.xcconfig"; sourceTree = "<group>"; };
+		03C85C4020662E010037BBE2 /* StubUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubUserService.swift; sourceTree = "<group>"; };
 		787C49FA7968DA49BD0DE2DB /* Pods-FastLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastLogin.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastLogin/Pods-FastLogin.release.xcconfig"; sourceTree = "<group>"; };
 		B50732A3CA73A145E66CD1B8 /* Pods-FastLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastLogin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastLogin/Pods-FastLogin.debug.xcconfig"; sourceTree = "<group>"; };
 		D916644A736D76F0E3BF4107 /* Pods_FastLoginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastLoginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				0362658C205E92D400BBDAC0 /* StubAuthService.swift */,
+				03C85C4020662E010037BBE2 /* StubUserService.swift */,
 				03626584205E7E9700BBDAC0 /* LoginViewControllerTests.swift */,
 				0362658E205E983A00BBDAC0 /* ProfileViewControllerTests.swift */,
 				03626586205E7E9700BBDAC0 /* Info.plist */,
@@ -362,6 +365,7 @@
 			files = (
 				03626585205E7E9700BBDAC0 /* LoginViewControllerTests.swift in Sources */,
 				0362658D205E92D400BBDAC0 /* StubAuthService.swift in Sources */,
+				03C85C4120662E010037BBE2 /* StubUserService.swift in Sources */,
 				0362658F205E983A00BBDAC0 /* ProfileViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
