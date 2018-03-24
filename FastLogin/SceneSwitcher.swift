@@ -10,7 +10,7 @@ import UIKit
 
 final class SceneSwitcher {
   let window: UIWindow?
-  var authService: AuthServiceType?
+  var loginStoryboard: LoginStoryboard?
   var userService: UserServiceType?
 
   init(window: UIWindow?) {
@@ -18,12 +18,7 @@ final class SceneSwitcher {
   }
 
   func presentLogin() {
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let navigationController = storyboard.instantiateInitialViewController() as? UINavigationController
-    let loginViewController = navigationController?.topViewController as? LoginViewController
-    loginViewController?.authService = self.authService
-    loginViewController?.sceneSwitcher = self
-    self.window?.rootViewController = navigationController
+    self.window?.rootViewController = self.loginStoryboard?.initialViewController()
   }
 
   func presentProfile() {
