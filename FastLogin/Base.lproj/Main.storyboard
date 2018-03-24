@@ -32,7 +32,7 @@
                                 <rect key="frame" x="40" y="205" width="295" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="login" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="HNB-Bn-i06"/>
                                     <action selector="resetBackgroundColorOf:" destination="BYZ-38-t0r" eventType="editingChanged" id="CQ0-fz-car"/>

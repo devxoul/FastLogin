@@ -83,6 +83,11 @@ class LoginViewControllerTests: XCTestCase {
     XCTAssert(self.viewController.passwordField.backgroundColor == originalBackgroundColor)
   }
 
+  func testPasswordField_returnKeyTypeGo() {
+    _ = self.viewController.view
+    XCTAssertEqual(self.viewController.passwordField.returnKeyType, UIReturnKeyType.go)
+  }
+
   func testPasswordField_tryLogin_whenReturn() {
     // given
     let authService = StubAuthService()
