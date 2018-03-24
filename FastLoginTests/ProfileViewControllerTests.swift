@@ -32,4 +32,20 @@ final class ProfileViewControllerTests: XCTestCase {
     // then
     XCTAssert(viewController.welcomeLabel.text?.contains("fast") == true)
   }
+
+  func testLogoutButton_changeWindowRootViewController() {
+    // given
+    let logoutButton = viewController.view.subviews
+      .flatMap { $0 as? UIButton }
+      .first { $0.title(for: .normal) == "Sign out" }
+
+    // when
+    logoutButton?.sendActions(for: .touchUpInside)
+
+    // then
+    let window = UIApplication.shared.windows.first
+    let navigationController = window?.rootViewController as? UINavigationController
+    let rootViewController = navigationController?.viewControllers.first
+    XCTAssert(rootViewController is LoginViewController)
+  }
 }
