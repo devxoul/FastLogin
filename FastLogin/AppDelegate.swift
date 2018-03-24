@@ -14,9 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    let navigationController = self.window?.rootViewController as? UINavigationController
-    let loginViewController = navigationController?.viewControllers.first as? LoginViewController
-    loginViewController?.authService = AuthService.shared
+    let sceneSwitcher = SceneSwitcher(window: self.window)
+    sceneSwitcher.authService = AuthService.shared
+    sceneSwitcher.userService = UserService.shared
+    sceneSwitcher.presentLogin()
     return true
   }
 }
