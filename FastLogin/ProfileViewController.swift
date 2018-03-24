@@ -11,10 +11,12 @@ import UIKit
 final class ProfileViewController: UIViewController {
   @IBOutlet var welcomeLabel: UILabel!
 
+  var userService: UserServiceType?
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    UserService.shared.currentUser { result in
+    self.userService?.currentUser { result in
       switch result {
       case let .success(username):
         self.welcomeLabel.text = "Welcome, \(username)!"

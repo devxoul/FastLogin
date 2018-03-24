@@ -21,16 +21,16 @@ final class ProfileViewControllerTests: XCTestCase {
   }
 
   func testWelcomeLabel_presentUsername() {
+    // given
+    let userService = StubUserService()
+    userService.stubbedCurrentUserResult = .success("devxoul")
+    self.viewController.userService = userService
+
     // when
     _ = self.viewController.view // loadView
 
-    // wait
-    let expectation = XCTestExpectation()
-    DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: expectation.fulfill)
-    XCTWaiter().wait(for: [expectation], timeout: 3)
-
     // then
-    XCTAssert(viewController.welcomeLabel.text?.contains("fast") == true)
+    XCTAssert(viewController.welcomeLabel.text?.contains("devxoul") == true)
   }
 
   func testLogoutButton_changeWindowRootViewController() {
